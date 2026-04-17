@@ -16,7 +16,7 @@ const Header = () => {
 
   return (
     <header>
-      <h1 onClick={() => navigate('/')}>미디어 플랫폼</h1>
+      <h1 onClick={() => navigate('/')}>미디어 플랫폼 navigate</h1>
       <nav>
         {isAuthenticated ? (
           <>

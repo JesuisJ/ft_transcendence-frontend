@@ -1,13 +1,12 @@
 import { Outlet } from 'react-router-dom'
+import Header from './Header'
 
 const Layout = () => {
   return (
     <div>
-      <header>
-        {/* 나중에 Header 컴포넌트 들어올 자리 */}
-      </header>
+      <Header />
       <main>
-        <Outlet />  {/* 각 페이지가 여기에 렌더링됨 */}
+        <Outlet />
       </main>
     </div>
   )
