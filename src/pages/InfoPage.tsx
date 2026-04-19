@@ -1,10 +1,20 @@
-const InfoPage = () => {
-  return (
-    <div>
-      <h1>미디어 추천 플랫폼</h1>
-      <p>영화, 드라마, 애니메이션을 추천해드려요</p>
-    </div>
-  )
-}
+import { useSelector } from 'react-redux';
+import type { RootState } from '../store';
+import { useI18n } from '../lib/i18n';
 
-export default InfoPage
+export default function HomePage() {
+  const user = useSelector((state: RootState) => state.auth.user);
+  const { t } = useI18n();
+
+  return (
+    <div className="min-h-screen">
+      <main className="mx-auto flex min-h-[calc(100vh-85px)] w-full max-w-6xl items-center justify-center px-4 py-10">
+        {user ? (
+          <div className="text-sm font-semibold text-slate-100">
+            {t('home.welcomePrefix')} {user.username}{t('home.welcomeSuffix')}
+          </div>
+        ) : null}
+      </main>
+    </div>
+  );
+}

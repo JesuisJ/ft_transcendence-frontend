@@ -5,6 +5,7 @@ import ErrorBoundary from './components/ErrorBoundary'
 import InfoPage from './pages/InfoPage'
 import LoginPage from './pages/LoginPage'
 import HomePage from './pages/HomePage'
+import SignupPage from './pages/SignupPage'
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
           <Route element={<Layout />}>
             <Route path="/" element={<InfoPage />} />
             <Route path="/login" element={<LoginPage />} />
+            <Route path="/signup" element={<SignupPage />} />
             <Route
               path="/home"
               element={
